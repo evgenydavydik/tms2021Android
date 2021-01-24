@@ -15,8 +15,8 @@ public class Homework {
      * 2. (optional) if sum of a and b is more then int can store -- return -1;
      **/
     public static int sum(int a, int b) {
-        long summa = (long)a+b;
-        if (summa>Integer.MAX_VALUE){
+        long summa = (long) a + b;
+        if (summa > Integer.MAX_VALUE) {
             return -1;
         }
         return Math.toIntExact(summa);
@@ -38,10 +38,10 @@ public class Homework {
      */
     public static int max(int a, int b) {
 
-       // if(a>=b)
-       //     return a;
-       // else return b;
-        return Math.max(a,b);
+        // if(a>=b)
+        //     return a;
+        // else return b;
+        return Math.max(a, b);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Homework {
      * Method should return 3
      */
     public static double average(int[] array) {
-        double sum_elem_array=0;
-        for(int element : array){
-            sum_elem_array+=element;
+        double sum_elem_array = 0;
+        for (int element : array) {
+            sum_elem_array += element;
         }
         return sum_elem_array / array.length;
     }
@@ -64,10 +64,10 @@ public class Homework {
      * Method should return max element of array. For example if array = {1,2,10,3} then method should return 10;
      **/
     public static int max(int[] array) {
-        int max_element=0;
-        for (int element : array){
-            if (max_element<element){
-                max_element=element;
+        int max_element = 0;
+        for (int element : array) {
+            if (max_element < element) {
+                max_element = element;
             }
         }
         return max_element;
@@ -93,7 +93,7 @@ public class Homework {
         Scanner in = new Scanner(System.in);
         int a = in.nextInt();
         int b = in.nextInt();
-        return Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
+        return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
     }
 }
 
