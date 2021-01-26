@@ -24,7 +24,7 @@ public class Homework {
         if (number > 0) {
             number++;
         } else if (number < 0) {
-            number--;
+            number -= 2;
         } else {
             number = 10;
         }
@@ -98,7 +98,6 @@ public class Homework {
      * Method should print all prime numbers < 1000
      */
     public static void printPrimeNumbers() {
-        StringBuilder str = new StringBuilder();
         boolean isPrime = true;
         for (int i = 1; i < 1000; i++) {
             for (int j = 2; j < i; j++) {
@@ -110,11 +109,8 @@ public class Homework {
                 }
             }
             if (isPrime) {
-                str.append(i).append(',');
+                System.out.print(i + ",");
             }
         }
-
-        System.out.println(str);
-
     }
 }
