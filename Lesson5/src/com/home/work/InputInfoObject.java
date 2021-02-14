@@ -9,11 +9,6 @@ import java.util.Scanner;
 
 public class InputInfoObject {
 
-    Passenger passenger;
-    Truck truck;
-    Militaryair militaryair;
-    Civilair civilair;
-
     public Passenger createPessenger() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter power \t");
@@ -32,7 +27,7 @@ public class InputInfoObject {
         String typeOfBody = scanner.next();
         System.out.print("Enter count passengers \t");
         int countPassengers = scanner.nextInt();
-        return passenger = new Passenger(power, top_speed, mass, brand, countWheel, fuelConsumption, typeOfBody, countPassengers);
+        return new Passenger(power, top_speed, mass, brand, countWheel, fuelConsumption, typeOfBody, countPassengers);
     }
 
     public Truck createTruck() {
@@ -51,7 +46,7 @@ public class InputInfoObject {
         int fuelConsumption = scanner.nextInt();
         System.out.print("Enter load capacity \t");
         int loadCapacity = scanner.nextInt();
-        return truck = new Truck(power, top_speed, mass, brand, countWheel, fuelConsumption, loadCapacity);
+        return new Truck(power, top_speed, mass, brand, countWheel, fuelConsumption, loadCapacity);
     }
 
     public Civilair createCivilair() {
@@ -72,7 +67,7 @@ public class InputInfoObject {
         int countPassengers = scanner.nextInt();
         System.out.print("Enter business class \t");
         boolean isBusinessClass = scanner.nextBoolean();
-        return civilair = new Civilair(power, top_speed, mass, brand, wingspan, minLengthRunway, countPassengers, isBusinessClass);
+        return new Civilair(power, top_speed, mass, brand, wingspan, minLengthRunway, countPassengers, isBusinessClass);
     }
 
     public Militaryair createMilitaryair() {
@@ -93,7 +88,7 @@ public class InputInfoObject {
         int countMissiles = scanner.nextInt();
         System.out.print("Enter ejection system \t");
         boolean isEjectionSystem = scanner.nextBoolean();
-        return militaryair = new Militaryair(power, top_speed, mass, brand, wingspan, minLengthRunway, isEjectionSystem, countMissiles);
+        return new Militaryair(power, top_speed, mass, brand, wingspan, minLengthRunway, isEjectionSystem, countMissiles);
     }
 
 }

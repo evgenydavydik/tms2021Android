@@ -1,6 +1,6 @@
 package com.home.work.model;
 
-public class Airtransport extends Transport{
+public class Airtransport extends Transport {
     private int wingspan;
     private int minLengthRunway;
 
