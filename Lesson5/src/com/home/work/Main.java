@@ -1,9 +1,6 @@
 package com.home.work;
 
-import com.home.work.model.Civilair;
-import com.home.work.model.Militaryair;
-import com.home.work.model.Passenger;
-import com.home.work.model.Truck;
+import com.home.work.model.*;
 
 import java.util.Scanner;
 
@@ -30,6 +27,7 @@ public class Main {
 */
         InputInfoObject inputInfoObject = new InputInfoObject();
         boolean isTrue = true;
+        Transport transport;
 
         do {
             System.out.println("Enter a number from the list below which object you want to create" +
@@ -41,25 +39,25 @@ public class Main {
             int number = scanner.nextInt();
             switch (number) {
                 case 1:
-                    inputInfoObject.createPessenger();
-                    System.out.println(inputInfoObject.passenger.toString());
-                    workWithObjPassenger(inputInfoObject.passenger);
+                    transport = inputInfoObject.createPessenger();
+                    System.out.println(transport.toString());
+                    workWithObjPassenger((Passenger) transport);
                     break;
                 case 2:
-                    inputInfoObject.createTruck();
-                    System.out.println(inputInfoObject.truck.toString());
-                    workWithObjTruck(inputInfoObject.truck);
+                    transport = inputInfoObject.createTruck();
+                    System.out.println(transport.toString());
+                    workWithObjTruck((Truck) transport);
                     break;
                 case 3:
-                    inputInfoObject.createCivilair();
-                    System.out.println(inputInfoObject.civilair.toString());
-                    workWithObjCivilair(inputInfoObject.civilair);
+                    transport = inputInfoObject.createCivilair();
+                    System.out.println(transport.toString());
+                    workWithObjCivilair((Civilair) transport);
                     break;
                 case 4:
-                    inputInfoObject.createMilitaryair();
-                    System.out.println(inputInfoObject.militaryair.toString());
-                    workWithObjMilitaryairShot(inputInfoObject.militaryair);
-                    workWithObjMilitaryairEnjection(inputInfoObject.militaryair);
+                    transport = inputInfoObject.createMilitaryair();
+                    System.out.println(transport.toString());
+                    workWithObjMilitaryairShot((Militaryair) transport);
+                    workWithObjMilitaryairEnjection((Militaryair) transport);
                     break;
                 case 0:
                     isTrue = false;

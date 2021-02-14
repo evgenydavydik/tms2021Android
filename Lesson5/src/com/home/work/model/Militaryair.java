@@ -33,8 +33,8 @@ public class Militaryair extends Airtransport {
         }
     }
 
-    public void ejection(){
-        if(isEjectionSystem){
+    public void ejection() {
+        if (isEjectionSystem) {
             System.out.println("The ejection was successful");
         } else {
             System.out.println("You don't have such a system");
