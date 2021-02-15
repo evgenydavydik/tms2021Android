@@ -1,6 +1,6 @@
 package by.teachmeskills.robot.heads;
 
-public class ToshibaHead implements IHead{
+public class ToshibaHead implements IHead {
     private int price;
 
     public ToshibaHead(int price) {
@@ -10,6 +10,7 @@ public class ToshibaHead implements IHead{
     public ToshibaHead() {
         price = 800;
     }
+
     @Override
     public void speek() {
         System.out.println("Добро пожаловать!");

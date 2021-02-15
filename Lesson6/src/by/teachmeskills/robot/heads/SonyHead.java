@@ -9,7 +9,7 @@ public class SonyHead implements IHead {
 
     public SonyHead() {
         price = 1250;
-    }
+    }//
 
     @Override
     public void speek() {

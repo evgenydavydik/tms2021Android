@@ -9,7 +9,7 @@ public class SamsungHand implements IHand {
 
     public SamsungHand() {
         price = 500;
-    }
+    } //
 
 
     @Override
