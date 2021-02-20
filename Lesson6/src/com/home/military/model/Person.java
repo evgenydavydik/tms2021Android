@@ -1,5 +1,9 @@
 package com.home.military.model;
 
+import com.home.military.AdjustmentInfoPerson;
+import com.home.military.exceptions.InvalidNameSurnameException;
+
+import java.util.Locale;
 import java.util.Random;
 
 public class Person {
@@ -9,16 +13,18 @@ public class Person {
     private Address address;
     private int age;
     private String name;
+    private String surname;
     //enum is definitely the better option here
     private String sex = FEMALE;
 
     public Person() {
     }
 
-    public Person(Address address, int age, String name, String sex) {
-        this.address = address;
-        this.age = age;
-        this.name = name;
+    public Person(Address address, int age, String name, String surname, String sex) {
+        setAddress(address);
+        setAge(age);
+        setName(name);
+        setSurname(surname);
         if (MALE.equals(sex) || FEMALE.equals(sex)) {
             this.sex = sex;
         }
@@ -60,10 +66,19 @@ public class Person {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name.trim().replace(name.charAt(0), name.toUpperCase(Locale.ROOT).charAt(0));
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname.trim().replace(surname.charAt(0), surname.toUpperCase(Locale.ROOT).charAt(0));
     }
 
     public String getSex() {
         return sex;
     }
+
 }

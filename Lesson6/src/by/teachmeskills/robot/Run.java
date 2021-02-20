@@ -21,22 +21,9 @@ public class Run {
             robots.get(i).action();
         }
 
-        System.out.println("Самый догой робот по имени " + expensiveRobot(robots).getName()+ " его стоимость " + expensiveRobot(robots).getPrice());
+        System.out.println("Самый догой робот по имени " + Expensive.expensiveRobot(robots).getName() + " его стоимость " + Expensive.expensiveRobot(robots).getPrice());
 
     }
 
-    public static Robot expensiveRobot(List<Robot> robots) {
-        int priceMax = 0;
-        for (Robot robot : robots) {
-            if (priceMax < robot.getPrice()) {
-                priceMax = robot.getPrice();
-            }
-        }
-        for (Robot robot : robots){
-            if(priceMax == robot.getPrice()){
-                return robot;
-            }
-        }
-        return robots.get(0);
-    }
+
 }

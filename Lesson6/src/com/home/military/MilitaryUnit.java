@@ -4,6 +4,7 @@ import com.home.military.exceptions.MilitaryUnitIsFullException;
 import com.home.military.exceptions.RecruitAlreadyServesException;
 import com.home.military.model.Person;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -74,6 +75,19 @@ public class MilitaryUnit {
         return false;
     }
 
+    public void infoRecrutsMilitaryUnit(MilitaryUnit militaryUnit) {
+        String[] namesRecruits = new String[militaryUnit.recruitsArray.length];
+        for (int i = 0; i < militaryUnit.recruitsArray.length; i++) {
+            namesRecruits[i] = militaryUnit.recruitsArray[i].getSurname() + " " + militaryUnit.recruitsArray[i].getName();
+        }
+        System.out.println("-------------------------");
+        Arrays.sort(namesRecruits);
+        for (int i = 0; i < namesRecruits.length; i++) {
+            System.out.println(i + 1 + ". " + namesRecruits[i]);
+        }
+        System.out.println("-------------------------");
+    }
+
 
     public int getFreePlacesFromList() {
         return capacity - recruits.size();
@@ -97,5 +111,9 @@ public class MilitaryUnit {
 
     public int getCapacity() {
         return capacity;
+    }
+
+    public int getUnitNumber() {
+        return unitNumber;
     }
 }

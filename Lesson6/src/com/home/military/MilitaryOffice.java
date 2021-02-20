@@ -23,7 +23,7 @@ public class MilitaryOffice {
         List<Person> fitPeople = new LinkedList<>();
         for (Person person : peopleByAddress) {
             if (isPersonFit(person)) {
-                System.out.printf("%s is fit!\n", person.getName()); // this is equal to System.out.println(person.getName() + " is fit!");
+                System.out.printf("%s is fit!\n", person.getSurname() + " " + person.getName()); // this is equal to System.out.println(person.getSurname() + " " + person.getName() + " is fit!");
                 fitPeople.add(person);
             }
         }
@@ -70,5 +70,14 @@ public class MilitaryOffice {
         return MALE.equals(person.getSex())
                 && person.getAge() > 17
                 && person.getAge() < 28;
+    }
+
+    public void getMilitaryInfo() {
+        for (MilitaryUnit unit : units) {
+            System.out.println("Military unit number " + unit.getUnitNumber());
+            if (unit.getFreePlacesFromList() != 0) {
+                unit.infoRecrutsMilitaryUnit(unit);
+            } else break;
+        }
     }
 }

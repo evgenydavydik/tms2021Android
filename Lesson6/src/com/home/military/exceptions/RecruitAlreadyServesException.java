@@ -1,6 +1,6 @@
 package com.home.military.exceptions;
 
-public class RecruitAlreadyServesException extends Exception{
+public class RecruitAlreadyServesException extends Exception {
     public RecruitAlreadyServesException() {
     }
 
