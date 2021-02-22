@@ -75,10 +75,12 @@ public class MilitaryUnit {
         return false;
     }
 
-    public void infoRecrutsMilitaryUnit(MilitaryUnit militaryUnit) {
-        String[] namesRecruits = new String[militaryUnit.recruitsArray.length];
-        for (int i = 0; i < militaryUnit.recruitsArray.length; i++) {
-            namesRecruits[i] = militaryUnit.recruitsArray[i].getSurname() + " " + militaryUnit.recruitsArray[i].getName();
+    public void infoRecrutsMilitaryUnit() {
+        String[] namesRecruits = new String[recruitsArray.length];
+        for (int i = 0; i < recruitsArray.length; i++) {
+            if (recruitsArray[i].getSurname()!=null&&recruitsArray[i].getName()!=null){
+                namesRecruits[i] = recruitsArray[i].getSurname() + " " + recruitsArray[i].getName();
+            }
         }
         System.out.println("-------------------------");
         Arrays.sort(namesRecruits);

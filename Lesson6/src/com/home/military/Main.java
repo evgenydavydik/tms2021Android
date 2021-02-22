@@ -29,7 +29,7 @@ public class Main {
         PersonRegistry registry = new PersonRegistry(new Person[]{gleb, konstantin, oleg, vadim, olga});
 
         MilitaryOffice office = new MilitaryOffice(registry,
-                new MilitaryUnit[]{new MilitaryUnit(2), new MilitaryUnit(0)});
+                new MilitaryUnit[]{new MilitaryUnit(2), new MilitaryUnit(3)});
         System.out.println(office.getCapacity());
         office.addFitPeopleToTheUnits(new Address("Belarus", "Vitebsk"));
         System.out.println(office.getCapacity());
