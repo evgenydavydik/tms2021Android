@@ -14,8 +14,8 @@ public class Main {
         Person gleb = new Person(glebsAddress, 25, "Gleb", "Pup kin", Person.MALE);
         AdjustmentInfoPerson.correctPerson(gleb);
 
-        Address olegsAddress = new Address("Belarus", "Braslav");
-        Person oleg = new Person(olegsAddress, 38, "Oleg", "Ivanov", Person.MALE);
+        Address olegsAddress = new Address("Belarus", "Vitebsk");
+        Person oleg = new Person(olegsAddress, 18, "Oleg", "Ivanov", Person.MALE);
         AdjustmentInfoPerson.correctPerson(oleg);
 
         Address vadimsAddress = new Address("Belarus", "Smorgon'");

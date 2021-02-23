@@ -76,11 +76,9 @@ public class MilitaryUnit {
     }
 
     public void infoRecrutsMilitaryUnit() {
-        String[] namesRecruits = new String[recruitsArray.length];
-        for (int i = 0; i < recruitsArray.length; i++) {
-            if (recruitsArray[i].getSurname()!=null&&recruitsArray[i].getName()!=null){
-                namesRecruits[i] = recruitsArray[i].getSurname() + " " + recruitsArray[i].getName();
-            }
+        String[] namesRecruits = new String[capacity-getFreePlacesFromArray()];
+        for (int i = 0; i < capacity-getFreePlacesFromArray(); i++) {
+            namesRecruits[i] = recruitsArray[i].getSurname() + " " + recruitsArray[i].getName();
         }
         System.out.println("-------------------------");
         Arrays.sort(namesRecruits);

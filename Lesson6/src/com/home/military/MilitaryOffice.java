@@ -74,7 +74,7 @@ public class MilitaryOffice {
 
     public void getMilitaryInfo() {
         for (MilitaryUnit unit : units) {
-            if (unit.getCapacity() != 0) {
+            if (unit.getCapacity()-unit.getFreePlacesFromArray() != 0) {
                 System.out.println("Military unit number " + unit.getUnitNumber());
                 unit.infoRecrutsMilitaryUnit();
             } else break;
