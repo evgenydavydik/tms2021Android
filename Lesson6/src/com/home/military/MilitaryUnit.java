@@ -76,8 +76,8 @@ public class MilitaryUnit {
     }
 
     public void infoRecrutsMilitaryUnit() {
-        String[] namesRecruits = new String[capacity-getFreePlacesFromArray()];
-        for (int i = 0; i < capacity-getFreePlacesFromArray(); i++) {
+        String[] namesRecruits = new String[takenPlacesCount];
+        for (int i = 0; i < takenPlacesCount; i++) {
             namesRecruits[i] = recruitsArray[i].getSurname() + " " + recruitsArray[i].getName();
         }
         System.out.println("-------------------------");
