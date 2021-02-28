@@ -13,14 +13,14 @@ public class Shop {
     }
 
     public void addProduct(Product product) {
-        if (productList.size()==0){
+        if (productList.size() == 0) {
             productList.add(product);
             productList.get(0).setIndexProductAdd(0);
         }
         for (int i = 0; i < productList.size(); i++) {
             if (product.getId() != productList.get(i).getId()) {
                 productList.add(product);
-                productList.get(i).setIndexProductAdd(i+1);
+                productList.get(i).setIndexProductAdd(i + 1);
                 break;
             }
         }
@@ -37,9 +37,6 @@ public class Shop {
 
     public void editProduct(Product product) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter id");
-        product.setId(scanner.nextInt());
-        scanner.nextLine();
         System.out.println("Enter name");
         product.setName(scanner.nextLine());
         System.out.println("Enter type");
@@ -55,7 +52,7 @@ public class Shop {
     @Override
     public String toString() {
         StringBuilder text = new StringBuilder();
-        for (Product product:productList){
+        for (Product product : productList) {
             text.append(product.toString()).append('\n');
         }
         return text.toString();
