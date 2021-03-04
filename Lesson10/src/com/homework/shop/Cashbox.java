@@ -1,18 +1,14 @@
 package com.homework.shop;
 
-import com.homework.Buyer;
-
-import java.util.List;
-
 public class Cashbox {
-    Buyer buyer;
+    private final int number;
 
-    public Cashbox(Buyer buyer) {
-        this.buyer = buyer;
+    public Cashbox(int number) {
+        this.number = number;
     }
 
-    synchronized String serveBuyer(String name) {
-        return "The client is served " + name + " " + buyer.getShoppingList().toString()+"\nCustomer served";
+    public boolean serveBuyer(String purchase) {
+        System.out.println("The client is served cashbox " + number + " " + purchase + "\nCustomer served");
+        return true;
     }
-
 }
